@@ -33,8 +33,8 @@ const Contact = () => {
     setLoading(true);
     emailjs
       .send(
-        service_af2qzxq,
-        template_plf2deh,
+        'service_af2qzxq',
+        'template_plf2deh',
         {
           from_name: form.name,
           to_name: 'Jen Perez',
@@ -42,7 +42,7 @@ const Contact = () => {
           to_email: 'jen@jenperez.dev',
           message: form.message,
         },
-        FzVn7y_EW66tXO-jT
+        'FzVn7y_EW66tXO-jT'
       )
       .then(
         () => {
