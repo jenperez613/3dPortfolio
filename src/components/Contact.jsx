@@ -6,10 +6,6 @@ import { EarthCanvas } from './canvas';
 import { SectionWrapper } from '../hoc';
 import { slideIn } from '../utils/motion';
 
-//FzVn7y_EW66tXO-jT
-//template_plf2deh
-//service_af2qzxq
-
 const Contact = () => {
   const formRef = useRef();
   const [form, setForm] = useState({
@@ -33,8 +29,8 @@ const Contact = () => {
     setLoading(true);
     emailjs
       .send(
-        'service_af2qzxq',
-        'template_plf2deh',
+        'import.meta.env.VITE_EMAIL_SERVICE_ID',
+        'import.meta.env.VITE_EMAIL_TEMPLATE_ID',
         {
           from_name: form.name,
           to_name: 'Jen Perez',
@@ -42,7 +38,7 @@ const Contact = () => {
           to_email: 'jen@jenperez.dev',
           message: form.message,
         },
-        'FzVn7y_EW66tXO-jT'
+        'import.meta.env.VITE_MAIL_PUBLIC_KEY'
       )
       .then(
         () => {
